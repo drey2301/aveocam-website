@@ -19,6 +19,7 @@
       --light: #f8f8f8;
       --gray: #e0e0e0;
       --success: #28a745;
+      --error: #dc3545;
     }
     
     * {
@@ -652,6 +653,57 @@
       background: rgba(0,0,0,0.5);
       color: white;
     }
+
+    /* Styles pour le formulaire et les messages */
+    .alert {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      display: none;
+    }
+    
+    .alert-success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .alert-error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    #form-message-container {
+      margin-top: 20px;
+    }
+    
+    .loading {
+      position: relative;
+      pointer-events: none;
+    }
+    
+    .loading:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .invalid {
+      border-color: var(--error) !important;
+    }
     
     @media (max-width: 992px) {
       .about-content, .contact-container {
@@ -1113,24 +1165,34 @@
         </div>
         <div class="contact-form">
           <h3 id="contact-form-title">Envoyez-nous un message</h3>
-          <form>
-            <div class="form-group">
-              <label for="name" id="form-name-label">Nom complet</label>
-              <input type="text" id="name" class="form-control" required>
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div id="form-message-container">
+              <div class="alert alert-success" id="success-message">
+                Votre message a été envoyé avec succès. Nous vous contacterons bientôt.
+              </div>
+              <div class="alert alert-error" id="error-message">
+                Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard.
+              </div>
             </div>
             <div class="form-group">
-              <label for="email" id="form-email-label">Email</label>
-              <input type="email" id="email" class="form-control" required>
+              <label for="name" id="form-name-label">Nom complet *</label>
+              <input type="text" id="name" name="name" class="form-control" required>
             </div>
             <div class="form-group">
-              <label for="subject" id="form-subject-label">Sujet</label>
-              <input type="text" id="subject" class="form-control" required>
+              <label for="email" id="form-email-label">Email *</label>
+              <input type="email" id="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
-              <label for="message" id="form-message-label">Message</label>
-              <textarea id="message" class="form-control" required></textarea>
+              <label for="subject" id="form-subject-label">Sujet *</label>
+              <input type="text" id="subject" name="subject" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary" id="form-submit-btn">Envoyer le message</button>
+            <div class="form-group">
+              <label for="message" id="form-message-label">Message *</label>
+              <textarea id="message" name="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="form-submit-btn">
+              <span id="submit-btn-text">Envoyer le message</span>
+            </button>
           </form>
         </div>
       </div>
@@ -1214,7 +1276,7 @@
       });
     });
     
-    // Language switcher functionality - Version complète
+    // Language switcher functionality
     const languageSelect = document.getElementById('language-select');
     
     // Dictionnaire de traductions
@@ -1329,11 +1391,11 @@
         "contact-hours-title": "Heures d'ouverture",
         "contact-hours": "Lundi - Vendredi: 8h - 17h<br>Samedi: 9h - 13h",
         "contact-form-title": "Envoyez-nous un message",
-        "form-name-label": "Nom complet",
-        "form-email-label": "Email",
-        "form-subject-label": "Sujet",
-        "form-message-label": "Message",
-        "form-submit-btn": "Envoyer le message",
+        "form-name-label": "Nom complet *",
+        "form-email-label": "Email *",
+        "form-subject-label": "Sujet *",
+        "form-message-label": "Message *",
+        "submit-btn-text": "Envoyer le message",
         
         // Footer
         "footer-tagline": "Solidarité - Inclusion - Équité. Notre engagement pour les veuves et orphelins du Cameroun.",
@@ -1348,6 +1410,7 @@
         "footer-address": "Mbouda, Département des Bamboutos, Cameroun",
         "footer-phone": "+237 691 270 313<br>+237 677 797 209",
         "footer-email": "aveocam65@gmail.com",
+        "footer-legal": "Association enregistrée sous le numéro 016/RDA/F.31/SAAJP du 21 juillet 2025",
         "footer-copyright": "&copy; 2025 AVEOCAM - Association pour l'Épanouissement des Veuves et Orphelins du Cameroun. Tous droits réservés."
       },
       en: {
@@ -1460,11 +1523,11 @@
         "contact-hours-title": "Opening hours",
         "contact-hours": "Monday - Friday: 8am - 5pm<br>Saturday: 9am - 1pm",
         "contact-form-title": "Send us a message",
-        "form-name-label": "Full name",
-        "form-email-label": "Email",
-        "form-subject-label": "Subject",
-        "form-message-label": "Message",
-        "form-submit-btn": "Send message",
+        "form-name-label": "Full name *",
+        "form-email-label": "Email *",
+        "form-subject-label": "Subject *",
+        "form-message-label": "Message *",
+        "submit-btn-text": "Send message",
         
         // Footer
         "footer-tagline": "Solidarity - Inclusion - Equity. Our commitment to widows and orphans in Cameroon.",
@@ -1479,6 +1542,7 @@
         "footer-address": "Mbouda, Bamboutos Department, Cameroon",
         "footer-phone": "+237 691 270 313<br>+237 677 797 209",
         "footer-email": "aveocam65@gmail.com",
+        "footer-legal": "Association registered under number 016/RDA/F.31/SAAJP of July 21, 2025",
         "footer-copyright": "&copy; 2025 AVEOCAM - Association for the Development of Widows and Orphans of Cameroon. All rights reserved."
       }
     };
@@ -1519,19 +1583,51 @@
     languageSelect.value = preferredLanguage;
     changeLanguage(preferredLanguage);
     
-    // Form submission
-    const contactForm = document.querySelector('.contact-form form');
-    if(contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const lang = document.documentElement.lang;
-        const message = lang === 'fr' 
-          ? 'Merci pour votre message! Nous vous contacterons bientôt.' 
-          : 'Thank you for your message! We will contact you soon.';
-        alert(message);
-        this.reset();
-      });
-    }
+    // Gestion du formulaire de contact avec Formspree
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    const submitBtn = document.getElementById('form-submit-btn');
+    const submitBtnText = document.getElementById('submit-btn-text');
+    
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Masquer les messages précédents
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+      
+      // Afficher l'indicateur de chargement
+      submitBtn.classList.add('loading');
+      submitBtnText.textContent = '';
+      
+      try {
+        const formData = new FormData(this);
+        const response = await fetch(this.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Succès - afficher le message de succès
+          successMessage.style.display = 'block';
+          this.reset();
+        } else {
+          // Erreur - afficher le message d'erreur
+          errorMessage.style.display = 'block';
+        }
+      } catch (error) {
+        // Erreur réseau
+        errorMessage.style.display = 'block';
+      } finally {
+        // Masquer l'indicateur de chargement
+        submitBtn.classList.remove('loading');
+        submitBtnText.textContent = document.documentElement.lang === 'fr' ? 'Envoyer le message' : 'Send message';
+      }
+    });
   </script>
 </body>
 </html>
