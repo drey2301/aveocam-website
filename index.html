@@ -85,6 +85,15 @@
       margin: 0 auto 2rem;
     }
     
+    .legal-reference {
+      background-color: rgba(139, 26, 26, 0.2);
+      padding: 8px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+    
     nav {
       background-color: white;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -707,6 +716,11 @@
       .section-title h2 {
         font-size: 2rem;
       }
+      
+      .legal-reference {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+      }
     }
   </style>
 </head>
@@ -726,8 +740,11 @@
       <div class="logo-container">
         <img src="logo-aveocam.png" alt="AVEOCAM">
       </div>
-      <h1 id="main-title">Association pour l'Épanouissement des Veuves et Orphelins du Cameroun</h1>
+      <h1 id="main-title">ASSOCIATION POUR L'ÉPANOUISSEMENT DES VEUVES ET ORPHELINS DU CAMEROUN</h1>
       <p class="tagline" id="main-tagline">Solidarité - Inclusion - Équité. Notre devise pour un monde plus juste où chaque veuve et orphelin trouve sa place et son épanouissement.</p>
+      <div class="legal-reference">
+        Référence légale : Numéro 016/RDA/F.31/SAAJP du 21 juillet 2025
+      </div>
       <div class="hero-buttons">
         <a href="#donate" class="btn btn-primary" id="donate-btn">Faire un don</a>
         <a href="#contact" class="btn btn-outline" id="contact-btn">Nous contacter</a>
@@ -764,8 +781,8 @@
       <div class="about-content">
         <div class="about-text">
           <h3 id="about-heading">Notre histoire et vision</h3>
-          <p id="about-text-1">Fondée en 2025 à Bamekoubou, Mbouda, AVEOCAM est une association à but non lucratif qui œuvre pour l'épanouissement des veuves et orphelins au Cameroun. Notre vision est celle d'un monde débarrassé des inégalités sociales où tous les veuves et orphelins jouissent d'une bonne santé et d'un épanouissement complet.</p>
-          <p id="about-text-2">Depuis notre création, nous avons touché la vie de plus de 500 bénéficiaires à travers nos différents programmes d'éducation, de santé, d'autonomisation et de protection sociale. Notre approche holistique vise à répondre aux besoins fondamentaux tout en restaurant la dignité et l'espoir.</p>
+          <p id="about-text-1">Fondée en 2025 à Mbouda, AVEOCAM est une association à but non lucratif qui œuvre pour l'épanouissement des veuves et orphelins au Cameroun. Notre vision est celle d'un monde débarrassé des inégalités sociales où tous les veuves et orphelins jouissent d'une bonne santé et d'un épanouissement complet.</p>
+          <p id="about-text-2">Depuis notre création, nous avons touché la vie de nombreux bénéficiaires à travers nos différents programmes d'éducation, de santé, d'autonomisation et de protection sociale. Notre approche holistique vise à répondre aux besoins fondamentaux tout en restaurant la dignité et l'espoir.</p>
           <a href="#mission" class="btn btn-primary" id="about-btn">Découvrir notre mission</a>
         </div>
         <div class="about-image">
@@ -911,14 +928,12 @@
       <div class="video-container">
         <div class="video-item">
           <video controls poster="video-thumb-1.jpg">
-            <!-- Remplacez par le chemin de votre vidéo -->
             <source src="videos/remise-dons.mp4" type="video/mp4">
             Votre navigateur ne supporte pas les vidéos HTML5.
           </video>
         </div>
         <div class="video-item">
           <video controls poster="video-thumb-2.jpg">
-            <!-- Remplacez par le chemin de votre vidéo -->
             <source src="videos/temoignages.mp4" type="video/mp4">
             Votre navigateur ne supporte pas les vidéos HTML5.
           </video>
@@ -952,32 +967,62 @@
       <div class="team-grid">
         <div class="team-member">
           <div class="team-image">
-            <img src="equipe-1.jpg" alt="Mr FOPA Guy Mollet">
+            <img src="equipe-1.jpg" alt="FOPA Guy Mollet">
           </div>
           <div class="team-info">
-            <h3 id="team-1-name">Mr FOPA Guy Mollet</h3>
-            <p id="team-1-role">Président du Conseil d'Administration</p>
-            <p id="team-1-desc">Adjudant-Chef de Gendarmerie retraité, il consacre son temps à la cause des veuves et orphelins depuis 5 ans.</p>
+            <h3 id="team-1-name">FOPA Guy Mollet</h3>
+            <p id="team-1-role">Président</p>
+            <p id="team-1-desc">Menuisier - Mbouda</p>
           </div>
         </div>
         <div class="team-member">
           <div class="team-image">
-            <img src="equipe-2.jpg" alt="Mme Ngo B.">
+            <img src="equipe-2.jpg" alt="ONGMESIL Waken Leandrine">
           </div>
           <div class="team-info">
-            <h3 id="team-2-name">Mme Ngo B.</h3>
-            <p id="team-2-role">Directrice Exécutive</p>
-            <p id="team-2-desc">Spécialiste en développement communautaire avec 10 ans d'expérience dans les ONG humanitaires.</p>
+            <h3 id="team-2-name">ONGMESIL Waken Leandrine</h3>
+            <p id="team-2-role">Vice-Présidente</p>
+            <p id="team-2-desc">Ingénieur - Yaoundé</p>
           </div>
         </div>
         <div class="team-member">
           <div class="team-image">
-            <img src="equipe-3.jpg" alt="Mr Jean K.">
+            <img src="equipe-3.jpg" alt="Tchinda Etienne">
           </div>
           <div class="team-info">
-            <h3 id="team-3-name">Mr Jean K.</h3>
-            <p id="team-3-role">Chargé des Programmes</p>
-            <p id="team-3-desc">Expert en conception et gestion de projets sociaux avec une spécialisation en éducation inclusive.</p>
+            <h3 id="team-3-name">Tchinda Etienne</h3>
+            <p id="team-3-role">Secrétaire Général</p>
+            <p id="team-3-desc">Enseignant - Mbouda</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="equipe-4.jpg" alt="Djuikui Geneviève">
+          </div>
+          <div class="team-info">
+            <h3 id="team-4-name">Djuikui Geneviève</h3>
+            <p id="team-4-role">Trésorière</p>
+            <p id="team-4-desc">Agricultrice - Mbouda</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="equipe-5.jpg" alt="Mbouewo Djiepe Jacques Maturin">
+          </div>
+          <div class="team-info">
+            <h3 id="team-5-name">Mbouewo Djiepe Jacques Maturin</h3>
+            <p id="team-5-role">Commissaire aux Comptes</p>
+            <p id="team-5-desc">Chauffeur - Yaoundé</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="equipe-6.jpg" alt="Matat Saah Nadège">
+          </div>
+          <div class="team-info">
+            <h3 id="team-6-name">Matat Saah Nadège</h3>
+            <p id="team-6-role">Censeur</p>
+            <p id="team-6-desc">Agricultrice - Mbouda</p>
           </div>
         </div>
       </div>
@@ -1034,7 +1079,7 @@
               </div>
               <div>
                 <h4 id="contact-address-title">Adresse</h4>
-                <p id="contact-address">Bamekoubou, Mbouda, Cameroun</p>
+                <p id="contact-address">Mbouda, Département des Bamboutos, Cameroun</p>
               </div>
             </div>
             <div class="contact-item">
@@ -1052,7 +1097,7 @@
               </div>
               <div>
                 <h4 id="contact-email-title">Email</h4>
-                <p id="contact-email">contact@aveocam.org<br>info@aveocam.org</p>
+                <p id="contact-email">aveocam65@gmail.com</p>
               </div>
             </div>
             <div class="contact-item">
@@ -1122,7 +1167,7 @@
             <div class="footer-contact-icon">
               <i class="fas fa-map-marker-alt"></i>
             </div>
-            <p id="footer-address">Bamekoubou, Mbouda, Cameroun</p>
+            <p id="footer-address">Mbouda, Département des Bamboutos, Cameroun</p>
           </div>
           <div class="footer-contact-item">
             <div class="footer-contact-icon">
@@ -1134,11 +1179,12 @@
             <div class="footer-contact-icon">
               <i class="fas fa-envelope"></i>
             </div>
-            <p id="footer-email">contact@aveocam.org<br>info@aveocam.org</p>
+            <p id="footer-email">aveocam65@gmail.com</p>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
+        <p id="footer-legal">Association enregistrée sous le numéro 016/RDA/F.31/SAAJP du 21 juillet 2025</p>
         <p id="footer-copyright">&copy; 2025 AVEOCAM - Association pour l'Épanouissement des Veuves et Orphelins du Cameroun. Tous droits réservés.</p>
       </div>
     </div>
@@ -1175,7 +1221,7 @@
     const translations = {
       fr: {
         // Header
-        "main-title": "Association pour l'Épanouissement des Veuves et Orphelins du Cameroun",
+        "main-title": "ASSOCIATION POUR L'ÉPANOUISSEMENT DES VEUVES ET ORPHELINS DU CAMEROUN",
         "main-tagline": "Solidarité - Inclusion - Équité. Notre devise pour un monde plus juste où chaque veuve et orphelin trouve sa place et son épanouissement.",
         "donate-btn": "Faire un don",
         "contact-btn": "Nous contacter",
@@ -1193,8 +1239,8 @@
         "about-title": "À propos d'AVEOCAM",
         "about-subtitle": "Découvrez notre association et notre engagement à Mbouda",
         "about-heading": "Notre histoire et vision",
-        "about-text-1": "Fondée en 2025 à Bamekoubou, Mbouda, AVEOCAM est une association à but non lucratif qui œuvre pour l'épanouissement des veuves et orphelins au Cameroun. Notre vision est celle d'un monde débarrassé des inégalités sociales où tous les veuves et orphelins jouissent d'une bonne santé et d'un épanouissement complet.",
-        "about-text-2": "Depuis notre création, nous avons touché la vie de plus de 500 bénéficiaires à travers nos différents programmes d'éducation, de santé, d'autonomisation et de protection sociale. Notre approche holistique vise à répondre aux besoins fondamentaux tout en restaurant la dignité et l'espoir.",
+        "about-text-1": "Fondée en 2025 à Mbouda, AVEOCAM est une association à but non lucratif qui œuvre pour l'épanouissement des veuves et orphelins au Cameroun. Notre vision est celle d'un monde débarrassé des inégalités sociales où tous les veuves et orphelins jouissent d'une bonne santé et d'un épanouissement complet.",
+        "about-text-2": "Depuis notre création, nous avons touché la vie de nombreux bénéficiaires à travers nos différents programmes d'éducation, de santé, d'autonomisation et de protection sociale. Notre approche holistique vise à répondre aux besoins fondamentaux tout en restaurant la dignité et l'espoir.",
         "about-btn": "Découvrir notre mission",
         
         // Mission section
@@ -1239,15 +1285,24 @@
         // Team section
         "team-title": "Notre Équipe",
         "team-subtitle": "Les personnes dévouées qui font vivre AVEOCAM au quotidien",
-        "team-1-name": "Mr FOPA Guy Mollet",
-        "team-1-role": "Président du Conseil d'Administration",
-        "team-1-desc": "Adjudant-Chef de Gendarmerie retraité, il consacre son temps à la cause des veuves et orphelins depuis 5 ans.",
-        "team-2-name": "Mme Ngo B.",
-        "team-2-role": "Directrice Exécutive",
-        "team-2-desc": "Spécialiste en développement communautaire avec 10 ans d'expérience dans les ONG humanitaires.",
-        "team-3-name": "Mr Jean K.",
-        "team-3-role": "Chargé des Programmes",
-        "team-3-desc": "Expert en conception et gestion de projets sociaux avec une spécialisation en éducation inclusive.",
+        "team-1-name": "FOPA Guy Mollet",
+        "team-1-role": "Président",
+        "team-1-desc": "Menuisier - Mbouda",
+        "team-2-name": "ONGMESIL Waken Leandrine",
+        "team-2-role": "Vice-Présidente",
+        "team-2-desc": "Ingénieur - Yaoundé",
+        "team-3-name": "Tchinda Etienne",
+        "team-3-role": "Secrétaire Général",
+        "team-3-desc": "Enseignant - Mbouda",
+        "team-4-name": "Djuikui Geneviève",
+        "team-4-role": "Trésorière",
+        "team-4-desc": "Agricultrice - Mbouda",
+        "team-5-name": "Mbouewo Djiepe Jacques Maturin",
+        "team-5-role": "Commissaire aux Comptes",
+        "team-5-desc": "Chauffeur - Yaoundé",
+        "team-6-name": "Matat Saah Nadège",
+        "team-6-role": "Censeur",
+        "team-6-desc": "Agricultrice - Mbouda",
         
         // Donate section
         "donate-title": "Soutenez Notre Action",
@@ -1266,11 +1321,11 @@
         "contact-subtitle": "Nous sommes à votre écoute pour toute question ou demande de partenariat",
         "contact-info-title": "Nos Coordonnées",
         "contact-address-title": "Adresse",
-        "contact-address": "Bamekoubou, Mbouda, Cameroun",
+        "contact-address": "Mbouda, Département des Bamboutos, Cameroun",
         "contact-phone-title": "Téléphone",
         "contact-phone": "+237 691 270 313<br>+237 677 797 209",
         "contact-email-title": "Email",
-        "contact-email": "contact@aveocam.org<br>info@aveocam.org",
+        "contact-email": "aveocam65@gmail.com",
         "contact-hours-title": "Heures d'ouverture",
         "contact-hours": "Lundi - Vendredi: 8h - 17h<br>Samedi: 9h - 13h",
         "contact-form-title": "Envoyez-nous un message",
@@ -1290,9 +1345,9 @@
         "footer-link-donate": "Faire un don",
         "footer-link-contact": "Contact",
         "footer-contact-title": "Contact",
-        "footer-address": "Bamekoubou, Mbouda, Cameroun",
+        "footer-address": "Mbouda, Département des Bamboutos, Cameroun",
         "footer-phone": "+237 691 270 313<br>+237 677 797 209",
-        "footer-email": "contact@aveocam.org<br>info@aveocam.org",
+        "footer-email": "aveocam65@gmail.com",
         "footer-copyright": "&copy; 2025 AVEOCAM - Association pour l'Épanouissement des Veuves et Orphelins du Cameroun. Tous droits réservés."
       },
       en: {
@@ -1315,8 +1370,8 @@
         "about-title": "About AVEOCAM",
         "about-subtitle": "Discover our association and our commitment in Mbouda",
         "about-heading": "Our story and vision",
-        "about-text-1": "Founded in 2025 in Bamekoubou, Mbouda, AVEOCAM is a non-profit organization working for the development of widows and orphans in Cameroon. Our vision is of a world free of social inequalities where all widows and orphans enjoy good health and complete fulfillment.",
-        "about-text-2": "Since our creation, we have touched the lives of more than 500 beneficiaries through our various education, health, empowerment and social protection programs. Our holistic approach aims to meet basic needs while restoring dignity and hope.",
+        "about-text-1": "Founded in 2025 in Mbouda, AVEOCAM is a non-profit organization working for the development of widows and orphans in Cameroon. Our vision is of a world free of social inequalities where all widows and orphans enjoy good health and complete fulfillment.",
+        "about-text-2": "Since our creation, we have touched the lives of many beneficiaries through our various education, health, empowerment and social protection programs. Our holistic approach aims to meet basic needs while restoring dignity and hope.",
         "about-btn": "Discover our mission",
         
         // Mission section
@@ -1361,15 +1416,24 @@
         // Team section
         "team-title": "Our Team",
         "team-subtitle": "The dedicated people who make AVEOCAM live every day",
-        "team-1-name": "Mr FOPA Guy Mollet",
-        "team-1-role": "Chairman of the Board",
-        "team-1-desc": "Retired Chief Warrant Officer of the Gendarmerie, he has been devoting his time to the cause of widows and orphans for 5 years.",
-        "team-2-name": "Mrs Ngo B.",
-        "team-2-role": "Executive Director",
-        "team-2-desc": "Community development specialist with 10 years of experience in humanitarian NGOs.",
-        "team-3-name": "Mr Jean K.",
-        "team-3-role": "Program Officer",
-        "team-3-desc": "Expert in design and management of social projects with a specialization in inclusive education.",
+        "team-1-name": "FOPA Guy Mollet",
+        "team-1-role": "President",
+        "team-1-desc": "Carpenter - Mbouda",
+        "team-2-name": "ONGMESIL Waken Leandrine",
+        "team-2-role": "Vice-President",
+        "team-2-desc": "Engineer - Yaoundé",
+        "team-3-name": "Tchinda Etienne",
+        "team-3-role": "General Secretary",
+        "team-3-desc": "Teacher - Mbouda",
+        "team-4-name": "Djuikui Geneviève",
+        "team-4-role": "Treasurer",
+        "team-4-desc": "Farmer - Mbouda",
+        "team-5-name": "Mbouewo Djiepe Jacques Maturin",
+        "team-5-role": "Auditor",
+        "team-5-desc": "Driver - Yaoundé",
+        "team-6-name": "Matat Saah Nadège",
+        "team-6-role": "Censor",
+        "team-6-desc": "Farmer - Mbouda",
         
         // Donate section
         "donate-title": "Support Our Action",
@@ -1388,11 +1452,11 @@
         "contact-subtitle": "We are available for any questions or partnership requests",
         "contact-info-title": "Our Contact Details",
         "contact-address-title": "Address",
-        "contact-address": "Bamekoubou, Mbouda, Cameroon",
+        "contact-address": "Mbouda, Bamboutos Department, Cameroon",
         "contact-phone-title": "Phone",
         "contact-phone": "+237 691 270 313<br>+237 677 797 209",
         "contact-email-title": "Email",
-        "contact-email": "contact@aveocam.org<br>info@aveocam.org",
+        "contact-email": "aveocam65@gmail.com",
         "contact-hours-title": "Opening hours",
         "contact-hours": "Monday - Friday: 8am - 5pm<br>Saturday: 9am - 1pm",
         "contact-form-title": "Send us a message",
@@ -1412,12 +1476,11 @@
         "footer-link-donate": "Donate",
         "footer-link-contact": "Contact",
         "footer-contact-title": "Contact",
-        "footer-address": "Bamekoubou, Mbouda, Cameroon",
+        "footer-address": "Mbouda, Bamboutos Department, Cameroon",
         "footer-phone": "+237 691 270 313<br>+237 677 797 209",
-        "footer-email": "contact@aveocam.org<br>info@aveocam.org",
+        "footer-email": "aveocam65@gmail.com",
         "footer-copyright": "&copy; 2025 AVEOCAM - Association for the Development of Widows and Orphans of Cameroon. All rights reserved."
       }
-      // Ajoutez d'autres langues si nécessaire...
     };
     
     // Fonction pour changer la langue
