@@ -971,28 +971,100 @@
     </div>
   </section>
 
-  <section class="video-section">
-    <div class="container">
-      <div class="section-title">
-        <h2 id="video-title">AVEOCAM en Action</h2>
-        <p id="video-subtitle">Découvrez nos activités à travers ces vidéos tournées sur le terrain</p>
-      </div>
-      <div class="video-container">
-        <div class="video-item">
-          <video controls poster="video-thumb-1.jpg">
-            <source src="videos/remise-dons.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas les vidéos HTML5.
-          </video>
+ <div class="aveocam-section">
+    <h2>AVEOCAM en Action</h2>
+    <p>Découvrez nos activités à travers ces vidéos tournées sur le terrain</p>
+    
+    <!-- Conteneur vidéo avec intégration Facebook et fallback -->
+    <div class="video-container">
+        <iframe 
+            src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2F61578945313038%2Fvideos%2F2259946061106302%2F&show_text=false&width=560&t=0" 
+            width="560" 
+            height="315" 
+            style="border:none;overflow:hidden" 
+            scrolling="no" 
+            frameborder="0" 
+            allowfullscreen="true" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            loading="lazy"
+            title="Vidéo AVEOCAM sur Facebook">
+        </iframe>
+        
+        <!-- Lien de fallback (visible seulement si l'iframe échoue) -->
+        <div class="video-fallback" style="display: none;">
+            <a href="https://www.facebook.com/61578945313038/videos/2259946061106302" target="_blank" class="video-link">
+                ▶ Voir la vidéo sur Facebook
+            </a>
         </div>
-        <div class="video-item">
-          <video controls poster="video-thumb-2.jpg">
-            <source src="videos/temoignages.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas les vidéos HTML5.
-          </video>
-        </div>
-      </div>
     </div>
-  </section>
+</div>
+
+<!-- Styles CSS -->
+<style>
+    /* Conteneur principal responsive */
+    .aveocam-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    /* Adaptation de la vidéo aux mobiles */
+    .video-container {
+        position: relative;
+        max-width: 100%;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+        min-height: 315px;
+        aspect-ratio: 16/9;
+        display: block;
+    }
+    
+    /* Style du lien de fallback */
+    .video-link {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 24px;
+        background-color: #4267B2;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    
+    .video-link:hover {
+        background-color: #365899;
+    }
+    
+    /* Afficher le fallback si l'iframe est bloquée */
+    .video-container iframe[src=""] + .video-fallback,
+    .video-container iframe:not([src]) + .video-fallback {
+        display: block;
+        padding: 20px;
+        background: #f5f5f5;
+        border-radius: 8px;
+    }
+</style>
+
+<!-- Script pour détecter les échecs de chargement de l'iframe (optionnel) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const iframe = document.querySelector('.video-container iframe');
+        iframe.onerror = function() {
+            document.querySelector('.video-fallback').style.display = 'block';
+            iframe.style.display = 'none';
+        };
+    });
+</script>
 
   <section class="testimonials">
     <div class="container">
